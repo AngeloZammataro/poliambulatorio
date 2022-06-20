@@ -78,15 +78,4 @@ public class Persona {
         this.mail = mail;
     }
 
-    @Override
-    public String toString() {
-        return "Persona{" +
-                "id=" + id +
-                ", nome='" + nome + '\'' +
-                ", cognome='" + cognome + '\'' +
-                ", indirizzo='" + indirizzo + '\'' +
-                ", recapitoMobile='" + recapitoMobile + '\'' +
-                ", mail='" + mail + '\'' +
-                '}';
-    }
 }

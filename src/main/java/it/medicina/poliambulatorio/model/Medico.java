@@ -29,11 +29,4 @@ public class Medico extends Persona{
         this.badgeId = badgeId;
     }
 
-    @Override
-    public String toString() {
-        return super.toString() +
-                "specializzazione='" + specializzazione + '\'' +
-                ", badgeId='" + badgeId + '\'' +
-                '}';
-    }
 }

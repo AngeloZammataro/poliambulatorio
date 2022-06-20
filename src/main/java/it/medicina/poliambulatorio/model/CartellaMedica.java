@@ -1,12 +1,15 @@
 package it.medicina.poliambulatorio.model;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 public class CartellaMedica {
     private Paziente paziente;
-    private String dataCartella;
+    private LocalDate dataCartella;
     private String referto;
     private String terapia;
 
-    public CartellaMedica(Paziente paziente, String dataCartella, String referto, String terapia) {
+    public CartellaMedica(Paziente paziente, LocalDate dataCartella, String referto, String terapia) {
         this.paziente = paziente;
         this.dataCartella = dataCartella;
         this.referto = referto;
@@ -21,11 +24,11 @@ public class CartellaMedica {
         this.paziente = paziente;
     }
 
-    public String getDataCartella() {
+    public LocalDate getDataCartella() {
         return dataCartella;
     }
 
-    public void setDataCartella(String dataCartella) {
+    public void setDataCartella(LocalDate dataCartella) {
         this.dataCartella = dataCartella;
     }
 

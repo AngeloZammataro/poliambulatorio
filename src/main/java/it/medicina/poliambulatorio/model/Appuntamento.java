@@ -1,34 +1,38 @@
 package it.medicina.poliambulatorio.model;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+
 public class Appuntamento {
 
-    private String dataAppuntamento;
-    private String orario;
+    private LocalDate dataAppuntamento;
+    private LocalTime orario;
     private Medico medico;
     private Paziente paziente;
 
 
 
-    public Appuntamento(String dataAppuntamento, String orario, Medico medico, Paziente paziente) {
+    public Appuntamento(LocalDate dataAppuntamento, LocalTime orario, Medico medico, Paziente paziente) {
         this.dataAppuntamento = dataAppuntamento;
         this.orario = orario;
         this.medico = medico;
         this.paziente = paziente;
     }
 
-    public String getDataAppuntamento() {
+    public LocalDate getDataAppuntamento() {
         return dataAppuntamento;
     }
 
-    public void setDataAppuntamento(String dataAppuntamento) {
+    public void setDataAppuntamento(LocalDate dataAppuntamento) {
         this.dataAppuntamento = dataAppuntamento;
     }
 
-    public String getOrario() {
+    public LocalTime getOrario() {
         return orario;
     }
 
-    public void setOrario(String orario) {
+    public void setOrario(LocalTime orario) {
         this.orario = orario;
     }
 
@@ -46,15 +50,5 @@ public class Appuntamento {
 
     public void setPaziente(Paziente paziente) {
         this.paziente = paziente;
-    }
-
-    @Override
-    public String toString() {
-        return "Appuntamento{" +
-                "dataAppuntamento='" + dataAppuntamento + '\'' +
-                ", orario='" + orario + '\'' +
-                ", medico=" + medico +
-                ", paziente=" + paziente +
-                '}';
     }
 }

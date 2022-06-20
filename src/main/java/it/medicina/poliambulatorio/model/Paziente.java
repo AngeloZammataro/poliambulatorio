@@ -20,11 +20,4 @@ public class Paziente extends Persona{
         this.patologia = patologia;
     }
 
-    @Override
-    public String toString() {
-        return super.toString() +
-                "patologia='" + patologia + '\'' +
-                ", cartellaMedica=" + cartellaMedica +
-                '}';
-    }
 }
