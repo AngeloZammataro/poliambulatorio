@@ -1,9 +1,6 @@
 package it.medicina.poliambulatorio.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -15,13 +12,19 @@ import javax.persistence.*;
 @Table(name = "medici")
 public class Medico extends Persona{
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
 
-    @Column(name = "specializzazione")
-    private String specializzazione;
+    @Column(name = "role")
+    private String role;
 
-    @Column(name = "badgeId")
-    private String badgeId;
+    @Column(name = "medical_specialization")
+    private String medical_specialization;
+
+    @Column(name = "badgeNumber")
+    private String badgeNumber;
+
+    @Column(name = "login_id")
+    private String login_id;
+
+    @Column(name = "password")
+    private String password;
 }

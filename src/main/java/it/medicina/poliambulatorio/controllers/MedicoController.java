@@ -45,9 +45,15 @@ public class MedicoController {
         updateMedico.setFirstName(medicoDetails.getFirstName());
         updateMedico.setLastName(medicoDetails.getLastName());
         updateMedico.setAddress(medicoDetails.getAddress());
+        updateMedico.setCity(medicoDetails.getCity());
         updateMedico.setPhone(medicoDetails.getPhone());
         updateMedico.setEmailId(medicoDetails.getEmailId());
-
+        updateMedico.set_male(medicoDetails.is_male());
+        updateMedico.setRole(medicoDetails.getRole());
+        updateMedico.setMedical_specialization(medicoDetails.getMedical_specialization());
+        updateMedico.setBadgeNumber(medicoDetails.getBadgeNumber());
+        updateMedico.setLogin_id(medicoDetails.getLogin_id());
+        updateMedico.setPassword(medicoDetails.getPassword());
 
         medicoRepository.save(updateMedico);
 

@@ -1,10 +1,19 @@
 package it.medicina.poliambulatorio.model;
 
+import lombok.*;
+
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "segretari")
 public class Segretario extends Persona {
 /*
     public Segretario(long id, String nome, String cognome, String indirizzo, String recapitoMobile, String mail) {
@@ -108,4 +117,17 @@ public class Segretario extends Persona {
         this.listaPazienti = listaPazienti;
     }
     */
+
+    @Column(name = "role")
+    private String role;
+
+    @Column(name = "badgeNumber")
+    private String badgeNumber;
+
+    @Column(name = "login_id")
+    private String login_id;
+
+    @Column(name = "password")
+    private String password;
+
 }

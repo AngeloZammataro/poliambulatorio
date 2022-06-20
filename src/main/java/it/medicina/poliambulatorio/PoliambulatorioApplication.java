@@ -2,6 +2,8 @@ package it.medicina.poliambulatorio;
 
 import it.medicina.poliambulatorio.model.*;
 import it.medicina.poliambulatorio.repository.MedicoRepository;
+import it.medicina.poliambulatorio.repository.PazienteRepository;
+import it.medicina.poliambulatorio.repository.SegretarioRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -22,43 +24,53 @@ public class PoliambulatorioApplication implements CommandLineRunner {
 	@Autowired
 	private PersonaRepository personaRepository;
 	private MedicoRepository medicoRepository;
+	private PazienteRepository pazienteRepository;
+	private SegretarioRepository segretarioRepository;
 
 	@Override
 	public void run(String... args) throws Exception {
-
+/*
 		Medico medico = new Medico();
-		medico.setFirstName("Erlik");
-		medico.setLastName("Khan");
-		medico.setAddress("Via Pakistan,1");
-		medico.setCity("Palermo");
-		medico.setPhone("3331122564");
-		medico.setEmailId("khan@gmail.com");
+		medico.setFirstName("Gregory");
+		medico.setLastName("House");
+		medico.setAddress("Via dei Pazzi,0");
+		medico.setCity("Torino");
+		medico.setPhone("3331992564");
+		medico.setEmailId("house@gmail.com");
 		medico.setRole("Medico");
 		medico.setMedical_specialization("cardiologist");
+		medico.setBadgeNumber("GRE-xyz-HOU");
+		medico.setLogin_id("gregoryhouse");
+		medico.setPassword("password");
+		medico.set_male(true);
+		medicoRepository.save(medico);
+
+		Segretario segretario = new Segretario();
+		segretario.setFirstName("Erlik");
+		segretario.setLastName("Khan");
+		segretario.setAddress("Via Pakistan,1");
+		segretario.setCity("Palermo");
+		segretario.setPhone("3331122564");
+		segretario.setEmailId("khan@gmail.com");
+		segretario.setRole("Segretario");
 		medico.setBadgeNumber("ERL-xyz-KHA");
-		medico.setMedical_pathology(null);
 		medico.setLogin_id("erlikkhan");
 		medico.setPassword("password");
 		medico.set_male(true);
-		medico.setMedical_record_number(0);
-		personaRepository.save(medico);
+		segretarioRepository.save(segretario);
 
-		Persona persona1 = new Persona();
-		persona1.setFirstName("Kem");
-		persona1.setLastName("Ric");
-		persona1.setAddress("Via Arsenio,7");
-		persona1.setCity("Palermo");
-		persona1.setPhone("3334622564");
-		persona1.setEmailId("kem@gmail.com");
-		persona1.setRole("Paziente");
-		persona1.setMedical_specialization(null);
-		persona1.setBadgeNumber("KEM-xyz-RIC");
-		persona1.setMedical_pathology("mal di pancia");
-		persona1.setLogin_id(null);
-		persona1.setPassword(null);
-		persona1.set_male(false);
-		persona1.setMedical_record_number(1);
-		personaRepository.save(persona1);
+		Paziente paziente = new Paziente();
+		paziente.setFirstName("Bruce");
+		paziente.setLastName("Banner");
+		paziente.setAddress("Via Verdi,7");
+		paziente.setCity("Roma");
+		paziente.setPhone("3337722564");
+		paziente.setEmailId("hulk@gmail.com");
+		paziente.setMedical_pathology("cervicalgia");
+		paziente.set_male(false);
+		paziente.setMedical_record_number(1);
+		pazienteRepository.save(paziente);
+
+ */
 	}
-
 }
