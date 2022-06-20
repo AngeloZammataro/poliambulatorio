@@ -1,6 +1,7 @@
 package it.medicina.poliambulatorio;
 
 import it.medicina.poliambulatorio.model.*;
+import it.medicina.poliambulatorio.repository.MedicoRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -20,23 +21,44 @@ public class PoliambulatorioApplication implements CommandLineRunner {
 
 	@Autowired
 	private PersonaRepository personaRepository;
+	private MedicoRepository medicoRepository;
 
 	@Override
 	public void run(String... args) throws Exception {
-		Persona persona = new Persona();
-		persona.setFirstName("Erlik");
-		persona.setLastName("Khan");
-		persona.setAddress("Via Pakistan,1");
-		persona.setPhone("3331122564");
-		persona.setEmailId("khan@gmail.com");
-		personaRepository.save(persona);
+
+		Medico medico = new Medico();
+		medico.setFirstName("Erlik");
+		medico.setLastName("Khan");
+		medico.setAddress("Via Pakistan,1");
+		medico.setCity("Palermo");
+		medico.setPhone("3331122564");
+		medico.setEmailId("khan@gmail.com");
+		medico.setRole("Medico");
+		medico.setMedical_specialization("cardiologist");
+		medico.setBadgeNumber("ERL-xyz-KHA");
+		medico.setMedical_pathology(null);
+		medico.setLogin_id("erlikkhan");
+		medico.setPassword("password");
+		medico.set_male(true);
+		medico.setMedical_record_number(0);
+		personaRepository.save(medico);
 
 		Persona persona1 = new Persona();
 		persona1.setFirstName("Kem");
 		persona1.setLastName("Ric");
-		persona1.setAddress("Via Aristeo,25");
-		persona1.setPhone("3265569887");
+		persona1.setAddress("Via Arsenio,7");
+		persona1.setCity("Palermo");
+		persona1.setPhone("3334622564");
 		persona1.setEmailId("kem@gmail.com");
+		persona1.setRole("Paziente");
+		persona1.setMedical_specialization(null);
+		persona1.setBadgeNumber("KEM-xyz-RIC");
+		persona1.setMedical_pathology("mal di pancia");
+		persona1.setLogin_id(null);
+		persona1.setPassword(null);
+		persona1.set_male(false);
+		persona1.setMedical_record_number(1);
 		personaRepository.save(persona1);
 	}
+
 }

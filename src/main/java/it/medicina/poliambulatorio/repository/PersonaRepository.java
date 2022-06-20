@@ -8,3 +8,4 @@ import org.springframework.stereotype.Repository;
 @Repository //specializzazione di component
 public interface PersonaRepository extends JpaRepository<Persona, Long> {
 }
+

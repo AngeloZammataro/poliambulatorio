@@ -1,8 +1,6 @@
 package it.medicina.poliambulatorio.controllers;
-import java.util.List;
 
 import it.medicina.poliambulatorio.model.Persona;
-
 import it.medicina.poliambulatorio.exception.ResourceNotFoundException;
 import it.medicina.poliambulatorio.repository.PersonaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
