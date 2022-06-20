@@ -1,81 +1,36 @@
 package it.medicina.poliambulatorio.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import javax.persistence.*;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
-@Table(name="persona")
+@Table(name = "persone")
 public class Persona {
 
     @Id
-    @GeneratedValue
-    private Long id;
-    private String nome;
-    private String cognome;
-    private String indirizzo;
-    private String recapitoMobile;
-    private String mail;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
 
-    public Persona() {
-    }
+    @Column(name = "first_name")
+    private String firstName;
 
-    public Persona(Long id, String nome, String cognome, String indirizzo, String recapitoMobile, String mail) {
-        this.id = id;
-        this.nome = nome;
-        this.cognome = cognome;
-        this.indirizzo = indirizzo;
-        this.recapitoMobile = recapitoMobile;
-        this.mail = mail;
-    }
+    @Column(name = "last_name")
+    private String lastName;
 
-    public Long getId() {
-        return id;
-    }
+    @Column(name = "address")
+    private String address;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    @Column(name = "phone")
+    private String phone;
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getCognome() {
-        return cognome;
-    }
-
-    public void setCognome(String cognome) {
-        this.cognome = cognome;
-    }
-
-    public String getIndirizzo() {
-        return indirizzo;
-    }
-
-    public void setIndirizzo(String indirizzo) {
-        this.indirizzo = indirizzo;
-    }
-
-    public String getRecapitoMobile() {
-        return recapitoMobile;
-    }
-
-    public void setRecapitoMobile(String recapitoMobile) {
-        this.recapitoMobile = recapitoMobile;
-    }
-
-    public String getMail() {
-        return mail;
-    }
-
-    public void setMail(String mail) {
-        this.mail = mail;
-    }
-
+    @Column(name = "email_id")
+    private String emailId;
 }

@@ -6,12 +6,6 @@ public class Medico extends Persona{
     private String badgeId;
 
 
-    public Medico(long id, String nome, String cognome, String indirizzo, String recapitoMobile, String mail,
-                  String specializzazione, String badgeId) {
-        super(id, nome, cognome, indirizzo, recapitoMobile, mail);
-        this.specializzazione = specializzazione;
-        this.badgeId = badgeId;
-    }
 
     public String getSpecializzazione() {
         return specializzazione;

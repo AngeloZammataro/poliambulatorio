@@ -1,4 +1,4 @@
-package it.medicina.poliambulatorio.repositories;
+package it.medicina.poliambulatorio.repository;
 
 import it.medicina.poliambulatorio.model.Persona;
 import org.springframework.data.jpa.repository.JpaRepository;

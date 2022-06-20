@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Segretario extends Persona {
-
+/*
     public Segretario(long id, String nome, String cognome, String indirizzo, String recapitoMobile, String mail) {
         super(id, nome, cognome, indirizzo, recapitoMobile, mail);
     }
@@ -107,4 +107,5 @@ public class Segretario extends Persona {
     public void setListaPazienti(List<Paziente> listaPazienti) {
         this.listaPazienti = listaPazienti;
     }
+    */
 }
