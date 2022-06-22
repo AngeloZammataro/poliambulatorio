@@ -1,13 +1,10 @@
 package it.medicina.poliambulatorio;
 
 import it.medicina.poliambulatorio.model.*;
-import it.medicina.poliambulatorio.repository.MedicoRepository;
-import it.medicina.poliambulatorio.repository.PazienteRepository;
-import it.medicina.poliambulatorio.repository.SegretarioRepository;
+import it.medicina.poliambulatorio.repository.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import it.medicina.poliambulatorio.repository.PersonaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 
@@ -26,6 +23,7 @@ public class PoliambulatorioApplication implements CommandLineRunner {
 	private MedicoRepository medicoRepository;
 	private PazienteRepository pazienteRepository;
 	private SegretarioRepository segretarioRepository;
+	private CartellaMedicaRepository cartellaMedicaRepository;
 
 	@Override
 	public void run(String... args) throws Exception {
@@ -67,7 +65,7 @@ public class PoliambulatorioApplication implements CommandLineRunner {
 		paziente.setPhone("3337722564");
 		paziente.setEmailId("hulk@gmail.com");
 		paziente.setMedical_pathology("cervicalgia");
-		paziente.set_male(false);
+		paziente.set_male(true);
 		paziente.setMedical_record_number(1);
 		pazienteRepository.save(paziente);
 

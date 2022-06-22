@@ -1,50 +1,35 @@
+
 package it.medicina.poliambulatorio.model;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
+import lombok.*;
+import javax.persistence.*;
+import java.util.Date;
 
+@Data
+@Entity
+@Table(name = "cartelle_mediche")
 public class CartellaMedica {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "medico", referencedColumnName = "id")
+    private Medico medico;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "paziente", referencedColumnName = "id")
     private Paziente paziente;
-    private LocalDate dataCartella;
+
+    @Column(name = "data")
+    private Date data;
+
+    @Column(name = "referto")
     private String referto;
+
+    @Column(name = "terapia")
     private String terapia;
 
-    public CartellaMedica(Paziente paziente, LocalDate dataCartella, String referto, String terapia) {
-        this.paziente = paziente;
-        this.dataCartella = dataCartella;
-        this.referto = referto;
-        this.terapia = terapia;
-    }
 
-    public Paziente getPaziente() {
-        return paziente;
-    }
-
-    public void setPaziente(Paziente paziente) {
-        this.paziente = paziente;
-    }
-
-    public LocalDate getDataCartella() {
-        return dataCartella;
-    }
-
-    public void setDataCartella(LocalDate dataCartella) {
-        this.dataCartella = dataCartella;
-    }
-
-    public String getReferto() {
-        return referto;
-    }
-
-    public void setReferto(String referto) {
-        this.referto = referto;
-    }
-
-    public String getTerapia() {
-        return terapia;
-    }
-
-    public void setTerapia(String terapia) {
-        this.terapia = terapia;
-    }
 }

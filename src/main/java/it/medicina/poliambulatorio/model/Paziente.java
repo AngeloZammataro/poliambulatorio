@@ -4,10 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+@Data
 @Entity
 @Table(name = "pazienti")
 public class Paziente extends Persona{
