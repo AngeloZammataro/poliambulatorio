@@ -3,6 +3,7 @@ package it.medicina.poliambulatorio.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -13,13 +14,26 @@ public class Persona {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @Column(name = "idPersona")
+    private long idPersona;
 
-    @Column(name = "first_name")
+    @Column(name = "firstName")
     private String firstName;
 
-    @Column(name = "last_name")
+    @Column(name = "lastName")
     private String lastName;
+
+    @Column(name = "nationality")
+    private String nationality;
+
+    @Column(name = "placeOfBirth")
+    private String placeOfBirth;
+
+    @Column(name = "dateOfBirth")
+    private Date dateOfBirth;
+
+    @Column(name = "documentNumber")
+    private String documentNumber;
 
     @Column(name = "address")
     private String address;
@@ -30,9 +44,9 @@ public class Persona {
     @Column(name = "phone")
     private String phone;
 
-    @Column(name = "email_id")
-    private String emailId;
+    @Column(name = "email")
+    private String email;
 
-    @Column(name = "is_male")
-    private boolean is_male;
+    @Column(name = "gender")
+    private Gender gender;
 }

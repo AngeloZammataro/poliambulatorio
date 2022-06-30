@@ -24,6 +24,7 @@ public class PoliambulatorioApplication implements CommandLineRunner {
 	private PazienteRepository pazienteRepository;
 	private SegretarioRepository segretarioRepository;
 	private CartellaMedicaRepository cartellaMedicaRepository;
+	private Appuntamento appuntamentoRepository;
 
 	@Override
 	public void run(String... args) throws Exception {

@@ -44,9 +44,16 @@ public class PazienteController {
 
         updatePaziente.setFirstName(pazienteDetails.getFirstName());
         updatePaziente.setLastName(pazienteDetails.getLastName());
+        updatePaziente.setNationality(pazienteDetails.getNationality());
+        updatePaziente.setPlaceOfBirth(pazienteDetails.getPlaceOfBirth());
+        updatePaziente.setDateOfBirth(pazienteDetails.getDateOfBirth());
+        updatePaziente.setDocumentNumber(pazienteDetails.getDocumentNumber());
         updatePaziente.setAddress(pazienteDetails.getAddress());
+        updatePaziente.setCity(pazienteDetails.getCity());
         updatePaziente.setPhone(pazienteDetails.getPhone());
-        updatePaziente.setEmailId(pazienteDetails.getEmailId());
+        updatePaziente.setEmail(pazienteDetails.getEmail());
+        updatePaziente.setGender(pazienteDetails.getGender());
+        updatePaziente.setMedicalPathology(pazienteDetails.getMedicalPathology());
 
         pazienteRepository.save(updatePaziente);
 

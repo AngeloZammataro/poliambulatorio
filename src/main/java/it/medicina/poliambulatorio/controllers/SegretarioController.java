@@ -45,9 +45,20 @@ public class SegretarioController {
 
         updateSegretario.setFirstName(segretarioDetails.getFirstName());
         updateSegretario.setLastName(segretarioDetails.getLastName());
+        updateSegretario.setNationality(segretarioDetails.getNationality());
+        updateSegretario.setPlaceOfBirth(segretarioDetails.getPlaceOfBirth());
+        updateSegretario.setDateOfBirth(segretarioDetails.getDateOfBirth());
+        updateSegretario.setDocumentNumber(segretarioDetails.getDocumentNumber());
         updateSegretario.setAddress(segretarioDetails.getAddress());
+        updateSegretario.setCity(segretarioDetails.getCity());
         updateSegretario.setPhone(segretarioDetails.getPhone());
-        updateSegretario.setEmailId(segretarioDetails.getEmailId());
+        updateSegretario.setEmail(segretarioDetails.getEmail());
+        updateSegretario.setGender(segretarioDetails.getGender());
+        updateSegretario.setRole(segretarioDetails.getRole());
+        updateSegretario.setBadgeNumber(segretarioDetails.getBadgeNumber());
+        updateSegretario.setLogin(segretarioDetails.getLogin());
+        updateSegretario.setPassword(segretarioDetails.getPassword());
+
 
 
         segretarioRepository.save(updateSegretario);

@@ -39,11 +39,10 @@ public class CartellaMedicaController {
         CartellaMedica updateCartellaMedica = cartellaMedicaRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("La cartella non esiste id: " + id));
 
-        updateCartellaMedica.setPaziente(cartellaMedicaDetails.getPaziente());
-        updateCartellaMedica.setMedico(cartellaMedicaDetails.getMedico());
-        updateCartellaMedica.setData(cartellaMedicaDetails.getData());
+        updateCartellaMedica.setDataCartella(cartellaMedicaDetails.getDataCartella());
         updateCartellaMedica.setReferto(cartellaMedicaDetails.getReferto());
         updateCartellaMedica.setTerapia(cartellaMedicaDetails.getTerapia());
+        updateCartellaMedica.setPaziente(cartellaMedicaDetails.getPaziente());
 
         cartellaMedicaRepository.save(updateCartellaMedica);
 

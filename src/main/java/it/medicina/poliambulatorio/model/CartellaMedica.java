@@ -12,24 +12,24 @@ public class CartellaMedica {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idCartella")
     private long id;
-
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "medico", referencedColumnName = "id")
-    private Medico medico;
-
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "paziente", referencedColumnName = "id")
+/*
+    @OneToOne(mappedBy = "cartellaMedica")
     private Paziente paziente;
-
-    @Column(name = "data")
-    private Date data;
+*/
+    @Column(name = "dataCartella")
+    private Date dataCartella;
 
     @Column(name = "referto")
     private String referto;
 
     @Column(name = "terapia")
     private String terapia;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "lastName", referencedColumnName = "lastName")
+    private Paziente paziente;
 
 
 }

@@ -8,10 +8,7 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
+@Data
 @Entity
 @Table(name = "segretari")
 public class Segretario extends Persona {
@@ -124,8 +121,8 @@ public class Segretario extends Persona {
     @Column(name = "badgeNumber")
     private String badgeNumber;
 
-    @Column(name = "login_id")
-    private String login_id;
+    @Column(name = "login")
+    private String login;
 
     @Column(name = "password")
     private String password;
