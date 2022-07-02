@@ -47,6 +47,8 @@ public class Persona {
     @Column(name = "email")
     private String email;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "gender")
     private Gender gender;
+
 }

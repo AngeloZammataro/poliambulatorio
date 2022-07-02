@@ -10,6 +10,7 @@ import org.springframework.boot.CommandLineRunner;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.Date;
 
 @SpringBootApplication
 public class PoliambulatorioApplication implements CommandLineRunner {
@@ -20,30 +21,42 @@ public class PoliambulatorioApplication implements CommandLineRunner {
 
 	@Autowired
 	private PersonaRepository personaRepository;
+	@Autowired
 	private MedicoRepository medicoRepository;
+	/*
+	@Autowired
 	private PazienteRepository pazienteRepository;
+	@Autowired
 	private SegretarioRepository segretarioRepository;
+	@Autowired
 	private CartellaMedicaRepository cartellaMedicaRepository;
+	@Autowired
 	private Appuntamento appuntamentoRepository;
-
+*/
 	@Override
 	public void run(String... args) throws Exception {
-/*
+
 		Medico medico = new Medico();
 		medico.setFirstName("Gregory");
 		medico.setLastName("House");
-		medico.setAddress("Via dei Pazzi,0");
+		medico.setNationality("Ita");
+		medico.setPlaceOfBirth("Roma");
+		medico.setDateOfBirth(new Date(1970, 1, 20));
+		medico.setDocumentNumber("RM5265489");
+		medico.setAddress("Via dei Pazzi,100");
 		medico.setCity("Torino");
 		medico.setPhone("3331992564");
-		medico.setEmailId("house@gmail.com");
-		medico.setRole("Medico");
-		medico.setMedical_specialization("cardiologist");
-		medico.setBadgeNumber("GRE-xyz-HOU");
-		medico.setLogin_id("gregoryhouse");
-		medico.setPassword("password");
-		medico.set_male(true);
-		medicoRepository.save(medico);
+		medico.setEmail("house@gmail.com");
+		medico.setGender(Gender.MALE);
 
+		medico.setRole("Medico");
+		medico.setMedicalSpecialization("cardiologist");
+		medico.setBadgeNumber("GRE-xyz-HOU");
+		medico.setLogin("gregoryhouse");
+		medico.setPassword("password");
+
+		medicoRepository.save(medico);
+/*
 		Segretario segretario = new Segretario();
 		segretario.setFirstName("Erlik");
 		segretario.setLastName("Khan");
