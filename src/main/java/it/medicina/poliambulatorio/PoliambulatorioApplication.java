@@ -23,11 +23,11 @@ public class PoliambulatorioApplication implements CommandLineRunner {
 	private PersonaRepository personaRepository;
 	@Autowired
 	private MedicoRepository medicoRepository;
-	/*
-	@Autowired
-	private PazienteRepository pazienteRepository;
 	@Autowired
 	private SegretarioRepository segretarioRepository;
+	@Autowired
+	private PazienteRepository pazienteRepository;
+	/*
 	@Autowired
 	private CartellaMedicaRepository cartellaMedicaRepository;
 	@Autowired
@@ -56,33 +56,44 @@ public class PoliambulatorioApplication implements CommandLineRunner {
 		medico.setPassword("password");
 
 		medicoRepository.save(medico);
-/*
+
 		Segretario segretario = new Segretario();
-		segretario.setFirstName("Erlik");
-		segretario.setLastName("Khan");
-		segretario.setAddress("Via Pakistan,1");
-		segretario.setCity("Palermo");
-		segretario.setPhone("3331122564");
-		segretario.setEmailId("khan@gmail.com");
+		segretario.setFirstName("Anna");
+		segretario.setLastName("Rossi");
+		segretario.setNationality("Ita");
+		segretario.setPlaceOfBirth("Roma");
+		segretario.setDateOfBirth(new Date(1980, 10, 12));
+		segretario.setDocumentNumber("RM2256988");
+		segretario.setAddress("Corso Italia,15");
+		segretario.setCity("Milano");
+		segretario.setPhone("3285699874");
+		segretario.setEmail("annarossi@gmail.com");
+		segretario.setGender(Gender.FEMALE);
+
 		segretario.setRole("Segretario");
-		medico.setBadgeNumber("ERL-xyz-KHA");
-		medico.setLogin_id("erlikkhan");
-		medico.setPassword("password");
-		medico.set_male(true);
+		segretario.setSecretaryPosition(SecretaryPosition.FRONT_OFFICE);
+		segretario.setBadgeNumber("ANN-xyz-ROS");
+		segretario.setLogin("annarossi");
+		segretario.setPassword("password2");
+
 		segretarioRepository.save(segretario);
 
 		Paziente paziente = new Paziente();
-		paziente.setFirstName("Bruce");
-		paziente.setLastName("Banner");
-		paziente.setAddress("Via Verdi,7");
-		paziente.setCity("Roma");
-		paziente.setPhone("3337722564");
-		paziente.setEmailId("hulk@gmail.com");
-		paziente.setMedical_pathology("cervicalgia");
-		paziente.set_male(true);
-		paziente.setMedical_record_number(1);
+		paziente.setFirstName("Mario");
+		paziente.setLastName("Verdi");
+		paziente.setNationality("Ita");
+		paziente.setPlaceOfBirth("Roma");
+		paziente.setDateOfBirth(new Date(1990, 2, 19));
+		paziente.setDocumentNumber("RM11226658");
+		paziente.setAddress("Corso Mattei,150");
+		paziente.setCity("Padova");
+		paziente.setPhone("3315666987");
+		paziente.setEmail("marioverdi@gmail.com");
+		paziente.setGender(Gender.MALE);
+		paziente.setMedicalPathology("Emicrania");
+
 		pazienteRepository.save(paziente);
 
- */
+
 	}
 }

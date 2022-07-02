@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
+@MappedSuperclass
 public class Employee extends Persona{
 
     @Column(name = "role")

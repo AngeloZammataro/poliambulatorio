@@ -5,6 +5,6 @@ import jdk.jfr.Label;
 public enum Gender {
 
     MALE,
-    FEMALE;
+    FEMALE
 
 }

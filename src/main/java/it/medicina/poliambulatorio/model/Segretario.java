@@ -11,7 +11,7 @@ import java.util.List;
 @Data
 @Entity
 @Table(name = "segretari")
-public class Segretario extends Persona {
+public class Segretario extends Employee {
 /*
     public Segretario(long id, String nome, String cognome, String indirizzo, String recapitoMobile, String mail) {
         super(id, nome, cognome, indirizzo, recapitoMobile, mail);
@@ -115,16 +115,8 @@ public class Segretario extends Persona {
     }
     */
 
-    @Column(name = "role")
-    private String role;
-
-    @Column(name = "badgeNumber")
-    private String badgeNumber;
-
-    @Column(name = "login")
-    private String login;
-
-    @Column(name = "password")
-    private String password;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "secretaryPosition")
+    private SecretaryPosition secretaryPosition;
 
 }
