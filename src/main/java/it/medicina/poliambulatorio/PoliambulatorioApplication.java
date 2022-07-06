@@ -2,14 +2,17 @@ package it.medicina.poliambulatorio;
 
 import it.medicina.poliambulatorio.model.*;
 import it.medicina.poliambulatorio.repository.*;
+import org.hibernate.type.LocalDateType;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.chrono.ChronoLocalDate;
 import java.util.Date;
 
 @SpringBootApplication
@@ -21,6 +24,9 @@ public class PoliambulatorioApplication implements CommandLineRunner {
 
 	@Autowired
 	private PersonaRepository personaRepository;
+
+	@Autowired
+	private EmployeeRepository employeeRepository;
 	@Autowired
 	private MedicoRepository medicoRepository;
 	@Autowired
@@ -41,7 +47,7 @@ public class PoliambulatorioApplication implements CommandLineRunner {
 		medico.setLastName("House");
 		medico.setNationality("Ita");
 		medico.setPlaceOfBirth("Roma");
-		medico.setDateOfBirth(new Date(1970, 1, 20));
+		medico.setDateOfBirth(new Date(1975, 5,2));
 		medico.setDocumentNumber("RM5265489");
 		medico.setAddress("Via dei Pazzi,100");
 		medico.setCity("Torino");
